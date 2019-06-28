@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp10
+{
+    class A
+    {
+        String brand;
+        String type = "pc";
+        int price;
+        String harddisk;
+        public void putdata(String b, int p, String h)
+        {
+            this.brand = b;
+            this.price = p;
+            this.harddisk = h;
+        }
+        public void getdata()
+        {
+            Console.WriteLine("Type:" + type);
+            Console.WriteLine("Brand:" + brand);
+            Console.WriteLine("Price:" + price);
+            Console.WriteLine("Harddisk:" + harddisk);
+        }
+    }
+
+  
+    class Program:A
+    {
+        static void Main(string[] args)
+        {
+            A b = new A();
+            b.putdata("lenovo",25000,"1TB");
+            b.getdata();
+           
+            b.putdata("Soney", 30000, "2TB");
+            b.getdata();
+           
+            b.putdata("MAC", 60000, "1TB");
+            b.getdata();
+            
+            Console.ReadKey();
+
+        }
+    }
+}
